@@ -15,7 +15,6 @@
 ![archive](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/2865b608-b052-49ca-acb1-e41e055a7e7c)
 ![bordereau envoie](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/67fbf5fb-dc16-4adb-bb89-6defe2a9cbbd)
 ![bordereau reception](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/b459caa9-e5ac-4d7f-a7a8-f24b174d9957)
-![Capture d'écran 2023-11-08 013613](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/1d4777da-3da7-422a-b26a-f93fdb71753a)
 ![conjoint-enfant](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/5e0210da-19ae-4a10-b44d-10cb901c230c)
 ![excel](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/b98ab743-9b39-4e76-8f08-edc9fcf5c817)
 ![last](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/d531d7dc-f39b-4e71-b1c5-aa8add82c26a)
