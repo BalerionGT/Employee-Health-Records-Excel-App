@@ -1,66 +1,22 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![login](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/e3d6356f-42ab-475f-b600-4517441236b1)
+![New password](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/1e4dae08-0c91-4562-b187-aa011a0c5aeb)
+![Reset](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/20fbe539-cbfd-4d11-b716-25c927b3c32b)
+![Home](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/b6eedd0b-ea7c-4733-a5de-b730210ccb39)
+![Dashboard1](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/a2190974-e6f9-4b47-99d7-4c1b4f7364d1)
+![Dashboard2](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/534dd794-a761-4324-8519-c34b1a28b76c)
+![Dossier  reception](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/d2a3d499-f839-485a-ab31-f99951c606e0)
+![Dossier envoie](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/e00ef82a-7914-4d4f-ba94-8ee1c0f5aed8)
+![liste conjoint](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/7a7e5cbe-b6fc-4811-8201-3f7a199843ef)
+![liste enfants](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/113e84bd-6ecb-4445-b8b7-f6f5d0047271)
+![liste medecin](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/3db446f7-ef39-4724-8685-f5da6e2ca3be)
+![Maladie](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/0913d13c-1701-4605-9dc6-3f62738540ec)
+![medecin](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/ad161c18-f2d7-410a-855d-1a671f3507e3)
+![Adherent](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/a7444a7f-2cc7-469e-bb8e-54da71f7c8c9)
+![archive](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/2865b608-b052-49ca-acb1-e41e055a7e7c)
+![bordereau envoie](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/67fbf5fb-dc16-4adb-bb89-6defe2a9cbbd)
+![bordereau reception](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/b459caa9-e5ac-4d7f-a7a8-f24b174d9957)
+![Capture d'écran 2023-11-08 013613](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/1d4777da-3da7-422a-b26a-f93fdb71753a)
+![conjoint-enfant](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/5e0210da-19ae-4a10-b44d-10cb901c230c)
+![excel](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/b98ab743-9b39-4e76-8f08-edc9fcf5c817)
+![last](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/d531d7dc-f39b-4e71-b1c5-aa8add82c26a)
+![liste adherent](https://github.com/BalerionGT/Employee-Health-Records-Excel-App/assets/125411704/24a06216-9abb-4d44-b6fc-bf21e3eadaa7)
