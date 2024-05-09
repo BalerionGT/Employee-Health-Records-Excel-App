@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{route('enfants.store')}}">
+                        <form method="post" action="{{route('enfants.update',['enfant'=>$enfant->id])}}">
                             @csrf
                             @method('PUT')
                             <h6 class="heading-small text-muted mb-4">{{ __('Information de l\'adhérent') }}</h6>

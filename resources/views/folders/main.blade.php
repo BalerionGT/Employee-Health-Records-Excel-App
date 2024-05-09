@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         </a>
-                        <a href="{{route('subreceptions.index')}}">
+                        <a href="{{route('subenvoies.index')}}">
                             <div class="card-folder mt-4" id="card2">
                                 <div class="container">
                                     <h4><b>Dossier de maladie</b></h4>

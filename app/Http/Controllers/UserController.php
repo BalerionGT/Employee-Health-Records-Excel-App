@@ -54,8 +54,8 @@ class UserController extends Controller
             "situation_famille"=>$request->situation_famille,
             "nbre_enfant"=>$request->nbre_enfant === null ? 0 : $request->nbre_enfant,
             "matricule_conjoint"=>$request->matricule_conjoint === null ? 0 : $request->matricule_conjoint,
-            "validation" => $request->validation === "on" ? 1 : 0, // Set validation based on the condition,
-            "admin"=>0
+            "validation" => $request->validation === "on" ? 1 : 0 ,
+            "admin"=> 0
         ]);
 
         return back()->with("success","Utilisateur ajouté avec succès!");

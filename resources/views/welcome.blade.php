@@ -48,9 +48,6 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Pricing</a>
-                    <a class="nav-item nav-link" href="#" href="#">Disabled</a>
                 </div>
                 <a href="{{route("login")}}" class="btn btn-primary shadow-none">Login</a>
             </div>
@@ -72,8 +69,7 @@
                             Effortlessly manage and organize your medical files with Zmédicaux. Our intuitive application streamlines the process of storing and accessing your important medical records, ensuring they are securely stored and readily available whenever you need them.
                         </div>
                         <div class="cta">
-                            <a href="#" class="btn btn-primary shadow-none">Explore now</a>
-                            <a href="#" class="btn btn-secondary shadow-none ms-3">See pricing</a>
+                            <a href="#" class="btn btn-primary shadow-none">Login</a>
                         </div>
                     </div>
                 </div>

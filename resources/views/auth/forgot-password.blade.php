@@ -17,7 +17,6 @@
         <form method="POST" action="{{ route('password.email') }}">
             @csrf
 
-
             <div class="row align-items-center">
                 <!-- Email Address -->
                 <div>
@@ -25,14 +24,10 @@
                     <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete autofocus />
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
-
-                <div class="flex items-center justify-end mt-4">
-                    <a class="btn btn-lg btn-primary w-100 shadow-none" type="submit">
-                        {{ __('Email Password Reset Link') }}
-                    </a>
-                </div>
             </div>
-
+            <div class="mt-5">
+            <button type="submit"class="btn btn-lg btn-primary w-100 shadow-none">{{ __('Reset Password') }}</button>
+            </div>
         </form>
     </div>
 

@@ -34,12 +34,10 @@
                             <!-- first row --> 
                             <div class="row d-flex justify-content-center align-items-center">
 
-                                <!--Matricule-->
                                 <div class="col-4">
                                 <div class="form-group{{ $errors->has('matricule') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-matricule">{{ __('Matricule') }}</label>
-                                    <input type="text" name="matricule" id="input-matricule" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Matricule') }}" required autofocus>
-
+                                    <input type="text" name="matricule" id="input-matricule" class="form-control form-control-alternative{{ $errors->has('matricule') ? ' is-invalid' : '' }}" placeholder="{{ __('Matricule') }}" required autofocus>
                                     @if ($errors->has('matricule'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('matricule') }}</strong>
@@ -47,7 +45,6 @@
                                     @endif
                                 </div>
                                 </div>
-
                                 <!--Nom-->
                                 <div class="col-4">
                                 <div class="form-group{{ $errors->has('nom') ? ' has-danger' : '' }}">

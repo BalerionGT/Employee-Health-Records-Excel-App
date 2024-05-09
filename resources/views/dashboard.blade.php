@@ -77,7 +77,8 @@
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
-                                            <span class="mr-2">{{($departement->count/$nbre_adherent)*100}}%</span>
+                                            <span class="mr-2">{{ floor(($departement->count / $nbre_adherent) * 100) }}%
+                                            </span>
                                             <div>
                                                 <div class="progress">
                                                     <div class="progress-bar {{$colors[$colorIndex]}}" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{($departement->count/$nbre_adherent)*100}}%;"></div>

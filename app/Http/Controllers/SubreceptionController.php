@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subenvoie;
 use App\Models\Subreception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SubreceptionController extends Controller
 {
@@ -12,8 +14,7 @@ class SubreceptionController extends Controller
      */
     public function index()
     {
-        $subfolders = Subreception::all();
-        return view('folders.maladie',compact('subfolders'));
+        
     }
 
     /**
@@ -46,6 +47,18 @@ class SubreceptionController extends Controller
             "montant_totale"=>$request->montant_totale,
             "solde"=>$request->solde === "Oui" ? 1:0,
         ]);
+
+        $related_envoie = Subenvoie::where('matricule', $request->matricule)
+        ->where('date_visite', $request->date_visite)
+        ->where('malade', $request->malade)
+        ->first();
+    
+    if ($related_envoie) {
+        $related_envoie->update([
+            "solde" => 1
+        ]);
+    }
+    
     
         return back()->with("success","Sub folder ajouté avec succès!");;
     }

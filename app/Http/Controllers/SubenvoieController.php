@@ -13,7 +13,8 @@ class SubenvoieController extends Controller
      */
     public function index()
     {
-        //
+        $subfolders = Subenvoie::all();
+        return view('folders.maladie',compact('subfolders'));
     }
 
     /**
@@ -90,6 +91,7 @@ class SubenvoieController extends Controller
     public function getAllSubfolders(string $matricule){
 
         $subfolders = Subenvoie::where('matricule', $matricule)
+        ->where('solde',0)
         ->orderBy('date_visite', 'asc')
         ->get();
     if($subfolders){

@@ -76,6 +76,7 @@ class ConjointController extends Controller
             "code_assurance"=>"required",
             "date_debut_adherence"=>"required",
             "date_fin_adherence"=>"required",
+            "code_assurance"=>"required",
             "validation"=>"required",
             "affil"=>"required"
         ]);
@@ -88,7 +89,8 @@ class ConjointController extends Controller
             "date_debut_adherence"=>$request->date_debut_adherence,
             "date_fin_adherence"=>$request->date_fin_adherence,
             "validation"=>$request->input('validation') === "Oui" ? 1 : 0,
-            "validation"=>$request->input('affil') === "Oui" ? 1 : 0,
+            "code_assurance"=>$request->code_assurance,
+            "affil"=>$request->input('affil') === "Oui" ? 1 : 0,
         ]);
         return back()->with("success","Mise à jours du conjoint avec succès!");
     }

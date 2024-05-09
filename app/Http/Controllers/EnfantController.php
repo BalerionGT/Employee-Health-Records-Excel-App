@@ -93,8 +93,9 @@ class EnfantController extends Controller
             "date_naissance"=>$request->date_naissance,
             "date_debut_adherence"=>$request->date_debut_adherence,
             "date_fin_adherence"=>$request->date_fin_adherence,
+            "code_assurance"=>$request->code_assurance,
             "validation"=>$request->input('validation') === "Oui" ? 1 : 0,
-            "validation"=>$request->input('affil') === "Oui" ? 1 : 0,
+            "affil"=>$request->input('affil') === "Oui" ? 1 : 0,
         ]);
         return back()->with("success","Mise à jours de l'enfant avec succès!");
     }

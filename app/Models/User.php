@@ -30,7 +30,6 @@ class User extends Authenticatable
         'nbre_enfant',
         'matricule_conjoint',
         'validation',
-        'admin',
     ];
 
     /**

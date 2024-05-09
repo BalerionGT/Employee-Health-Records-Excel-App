@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="{{route('conjoints.update')}}">
+                        <form method="post" action="{{route('conjoints.update',['conjoint'=> $conjoint->id])}}">
                             @csrf
                             @method('PUT')
 

@@ -95,38 +95,6 @@
 
                             </div>
                             </div>
-                            <script>
-                                var csrfToken = $('meta[name="csrf-token"]').attr('content');
-                                function createMainFolder(numeroEnvoye,dateEnvoye) {
-                                $.ajax({
-                                    type: 'POST',
-                                    url: '/envoies', // Update with the correct URL
-                                    data: { num_envoie: numeroEnvoye, date_envoie: dateEnvoye, _token: csrfToken },
-                                    success: function(response) {
-                                        console.log('Main folder created successfully:', response);
-                                        $('#input-num_envoie').val(response.num_envoie);
-                                        $('#input-montant_engage').val(response.montant_engage);
-                                        $('#input-nbre_dossier').val(response.nbre_dossier);
-                                        $('#input-id').val(response.id);
-                                    },
-                                    error: function(error) {
-                                        console.error('Error creating main folder:', error);
-                                    }
-                                });
-                            }
-
-                            $(document).ready(function() {
-                                $('#input-num_envoie').keydown(function(event) {
-                                    if (event.keyCode === 13) { // 13 is the keycode for the Enter key
-                                        event.preventDefault(); // Prevent the form submission
-                                        var numeroEnvoye = $(this).val();
-                                        var dateEnvoye = $('#input-date_envoie').val();
-                                        createMainFolder(numeroEnvoye, dateEnvoye);
-                                    }
-                                });
-                            });
-                            </script>
-
                             <h6 class="heading-small text-muted mb-4">{{ __('Information des dossiers') }}</h6>
 
                             <!-- Les dossiers du dossier d'envoie -->
@@ -189,36 +157,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script>
-                                    $(document).ready(function(){
-                                        $('#input-matricule').keydown(function(event) {
-                                        if (event.keyCode === 13) { // 13 is the keycode for the Enter key
-                                            event.preventDefault(); // Prevent the form submission
-                                            var matricule = $(this).val();
-                                            searchadherent(matricule);
-                                        }
-                                        function searchadherent(matricule){
-                                            $.ajax({
-                                                type: 'GET',
-                                                url: '/get-employee-data/' + matricule,
-                                                success: function(response) {
-                                                        if (response.success) {
-                                                            $('#input-adherent_nom').val(response.data.nom);
-                                                            $('#input-adherent_prenom').val(response.data.prenom);
-                                                        } else {
-                                                            $('#input-adherent_nom').val('');
-                                                            $('#input-adherent_prenom').val('');
-                                                            console.error('Error fetching employee data:', response.message);
-                                                        }
-                                                },
-                                                error: function(error) {
-                                                        console.error('Error fetching employee data:', error);
-                                                }
-                                            });
-                                        }
-                                    });
-                                    });
-                                </script>
                                 <!-- Second row -->
                                 <div class="row d-flex justify-content-center align-items-center">
 
@@ -246,86 +184,6 @@
 
                                 </div>
                             </div>
-                            <script>
-                                $(document).ready(function(){
-                                    $('#input-lien').on("change", function() {
-                                        if($(this).val() === "Lui-Même"){
-                                            var valeur = $('#input-adherent_prenom').val() + ' - 00';
-                                            $('#input-malade').empty();
-                                            $('#input-malade').append('<option value="' + valeur + '">' + valeur + '</option>');
-                                        }
-                                        else{
-                                            if($(this).val() === "Enfant"){
-                                                $('#input-malade').prop("disabled", false);
-                                                $('#input-malade').empty();
-                                                searchenfant($('#input-matricule').val());
-                                            }
-                                            else{
-                                                if($(this).val() === "Parent"){
-                                                    $('#input-malade').prop("disabled", false);
-                                                    $('#input-malade').empty();
-                                                    searchpartner($('#input-matricule').val());
-                                                }
-
-                                                else{
-                                                    $('#input-malade').prop("disabled", false);
-                                                    $('#input-malade').empty();
-                                                }
-                                            }
-                                        }
-                                    });
-                                });
-
-                                function searchenfant(matricule){
-                                    $.ajax({
-                                        type: 'GET',
-                                        url: '/get-employee-children/' + matricule,
-                                        success: function(response){
-                                            if(response.success){
-                                                const childrenData = response.data;
-                                                    for(let j = 0; j < childrenData.length; j++){
-                                                        const child = childrenData[j];
-                                                        const optionValue = child.prenom + ' - ' + child.code_assurance;
-                                                        $('#input-malade').append('<option value="' + optionValue + '">' + optionValue + '</option>');
-                                                    }
-                                            }
-                                            else{
-                                                $('#input-malade').append('<option value=""></option>');
-                                            }
-                                        },
-
-                                        error: function(error) {
-                                                console.error('Error fetching employee children:', error);
-                                        }
-                                    });
-                                }
-
-                                function searchpartner(matricule){
-                                    $.ajax({
-                                        type: 'GET',
-                                        url: '/get-employee-partner/' + matricule,
-                                        success: function(response){
-                                            if(response.success){
-                                                const partnerData = response.data;
-                                                    for(let j = 0; j < partnerData.length; j++){
-                                                        const partner = partnerData[j];
-                                                        const optionValue = partner.prenom + ' - ' + partner.code_assurance;
-                                                        $('#input-malade').append('<option value="' + optionValue + '">' + optionValue + '</option>');
-                                                    }
-
-                                            }
-                                            else{
-                                                $('#input-malade').append('<option value=""></option>');
-                                            }
-                                        },
-
-                                        error: function(error) {
-                                                console.error('Error fetching employee parent:', error);
-                                        }
-                                    });
-                                }
-                            </script>
-
                             <h6 class="heading-small text-muted mb-4">{{ __('Les frais engagées') }}</h6>
 
                             <!-- les frais engages -->
@@ -474,7 +332,6 @@
                                     </div>
                                 </div>
                                 <!-- second row -->
-
                                 <div class="row d-flex justify-content-center align-items-center">
 
                                     <!-- Observation -->
@@ -506,7 +363,8 @@
                                     </div>
 
                                 </div>
-                            </div>  <!-- div du container -->
+                            </div>  
+                            <!-- div du container -->
 
                             <!-- third row ligne des boutons -->
                             <div class="row">
@@ -527,128 +385,4 @@
         </div>
         @include('layouts.footers.auth')
     </div>
-
-    <script>
-        $(document).ready(function() {
-                // Add event listeners to the fields you want to sum
-                var fieldsToSum = ['#input-visite', '#input-pharmacie', '#input-radio', '#input-analyse', '#input-auxiliaires', '#input-optique', '#input-soin_dentaires', '#input-prothèse', '#input-autres', '#input-prise_en_charge'];
-
-                $(fieldsToSum.join(', ')).on('input', function() {
-                    calculateAndSetMontantTotal();
-                });
-
-                function calculateAndSetMontantTotal() {
-                    var sum = 0;
-                    for (var i = 0; i < fieldsToSum.length; i++) {
-                        var fieldValue = parseFloat($(fieldsToSum[i]).val()) || 0;
-                        sum += fieldValue;
-                    }
-                    $('#input-montant_totale').val(sum);
-                }
-
-                // Initialize montant total on page load
-                calculateAndSetMontantTotal();
-                
-        });
-
-        $(document).ready(function() {        
-            $('#btnSubmit').on("click", function() {
-                    var id = $('#input-id').val();
-                    var nbreDossier = $('#input-nbre_dossier').val();
-                    var montantEngage = $('#input-montant_engage').val();
-                    var montantTotale = $('#input-montant_totale').val();
-                    updatefolder(id, nbreDossier, montantEngage, montantTotale);
-              });
-        });
-
-        function updatefolder(id, nbreDossier, montantEngage, montantTotale) {
-                    $.ajax({
-                        type: 'PATCH',
-                        url: '/envoies/' + id,
-                        contentType: 'application/json',
-                        headers: { 'X-CSRF-TOKEN': csrfToken },
-                        data: JSON.stringify({
-                            nbre_dossier: nbreDossier,
-                            montant_engage: montantEngage,
-                            montant_totale: montantTotale,
-                            id: id
-                        }),
-                        success: function(response) {
-                            if (response.success) {
-                                $('#input-nbre_dossier').val(response.data.nbre_dossier);
-                                $('#input-montant_engage').val(response.data.montant_engage);
-                                $('#input-num_envoie').val(response.data.num_envoie);
-                                $('#input-id').val(response.data.id);
-                            }
-                        },
-                        error: function(error) {
-                            console.error('Error updating folder data:', error);
-                        }
-                        });
-                    }
-
-        $(document).ready(function() {
-            $('#dataForm').submit(function(event) {
-                event.preventDefault(); // Prevent default form submission
-                var formData = {
-                    id: $('#input-id').val(),
-                    matricule: $('#input-matricule').val(),
-                    date_visite: $('#input-date_visite').val(),
-                    adherent_nom: $('#input-adherent_nom').val(),
-                    adherent_prenom: $('#input-adherent_prenom').val(),
-                    lien: $('#input-lien').val(),
-                    malade: $('#input-malade').val(),
-                    visite: $('#input-visite').val(),
-                    pharmacie: $('#input-pharmacie').val(),
-                    radio: $('#input-radio').val(),
-                    analyse: $('#input-analyse').val(),
-                    auxiliaires: $('#input-auxiliaires').val(),
-                    optique: $('#input-optique').val(),
-                    soin_dentaires: $('#input-soin_dentaires').val(),
-                    prothèse: $('#input-prothèse').val(),
-                    autres: $('#input-autres').val(),
-                    prise_en_charge: $('#input-prise_en_charge').val(),
-                    observations: $('#input-observations').val(),
-                    montant_totale: $('#input-montant_totale').val()
-                };
-                console.log(formData.id_Envoie);
-                // Perform AJAX request
-                $.ajax({
-                    type: 'POST',
-                    url: '/subenvoies', // Replace with your server endpoint
-                    contentType: 'application/json',
-                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                    data: JSON.stringify(formData),
-                    success: function(response) {
-                        // Handle success (update UI, show messages, etc.)
-                        console.log('Subfolder created:', response);
-                        $('#input-matricule').val('');
-                        $('#input-date_visite').val('');
-                        $('#input-adherent_nom').val('');
-                        $('#input-adherent_prenom').val('');
-                        $('#input-lien').val('');
-                        $('#input-malade').empty();
-                        $('#input-visite').val('');
-                        $('#input-pharmacie').val('');
-                        $('#input-radio').val('');
-                        $('#input-analyse').val('');
-                        $('#input-auxiliaires').val('');
-                        $('#input-optique').val('');
-                        $('#input-soin_dentaires').val('');
-                        $('#input-prothèse').val('');
-                        $('#input-autres').val('');
-                        $('#input-prise_en_charge').val('');
-                        $('#input-observations').val('');
-                        $('#input-montant_totale').val('0');
-                    },
-                    error: function(xhr, textStatus, errorThrown) {
-                        // Handle error (show error messages, etc.)
-                        console.error('AJAX Error:', errorThrown);
-                    }
-                });
-            });
-
-        });
-
-    </script>
 @endsection
